@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Unit-4 Game</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/javascript/game.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+        <style>
+        body {
+        font-family: 'Oswald', sans-serif;
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .bg {
+            /* The image used */
+            background-image: url("assets/images/bg2.jpg");
+
+            /* Full height */
+            height: 100%; 
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            top: 10px;
+            padding-top: 5px;
+            padding-bottom: 8px;
+            background-color: #2196f3;
+            color: rgba(255, 255, 255, 0.975);
+        }
+
+        #instructions {
+            font-size: 18px;
+            background-color: #ffcdd2;
+            border: solid;
+            border-color: #ffbb33;
+            padding: 10px;
+        }
+
+        .morestats {
+            line-height: 12px;
+            font-size: 20px;
+            background-color: #b39ddb;
+            padding: 20px 10px 10px 10px;
+            margin-right: 5px;
+        }
+
+        .winloss {
+            line-height: 12px;
+            font-size: 20px;
+            background-color: #c5e1a5;
+            padding: 20px 10px 10px 10px;
+            margin-left: 5px;
+        }
+
+        .crystals {
+            padding-top: 20px;
+        }
+
+        .img {
+            border-radius: 15px 50px 30px;
+        }
+
+        #red {
+            background-color: tomato;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        #black {
+            background-color: #3E4551;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        #purple {
+            background-color: #aa66cc;
+            margin-left: 5px;
+            margin-right: 5px;
+
+        }
+        #diamond {
+            background-color: #26c6da;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        </style>
+
+    </head>
+
+<body>
+<div class="bg">
+
+<div class="container">
+    <div class="row">
+    <div class="col-md-3"></div>
+    <h1 class="col-md-6 page-header text-center border border-dark rounded">Crystals Collector!</h1>
+    <div class="col-md-3"></div>
+    </div>
+
+    <hr>
+    <div class="rounded" id="instructions">
+    <p><u>Instructions</u>:</p>
+    <ul>
+        <li>You will be given a random TARGET number at the start of the game.</li>
+        <li>There are four crystals below. By clicking on a crystal you will add a specific amount of points to YOUR TOTAL SCORE.</li>
+        <li>You win the game by matching YOUR TOTAL SCORE to the random TARGET number, you lose the game if YOUR TOTAL SCORE goes above the TARGET number.</li>
+        <li>The value of each crystal is hidden from you until you click on it.</li>
+        <li>Each time when the game starts, the game will change the values of each crystal and the TARGET number randomly.</li>
+    </ul>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-3 text-uppercase text-center morestats rounded">
+                <p id="targetNum">Target:</p>
+                <p class="your_total">Your total score is: 0</p>
+            </div>
+            <div class="col-md-3 text-center winloss rounded">
+                <p id="wins">Wins: 0</p>
+                <p id="losses">Losses: 0</p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+    <div class="container">
+            <div class="row crystals">
+                <div class="col-md-2"></div>
+                <img class="col-md-2 img" id="red" src="assets/images/red.png" alt="red" width=150 height=150>
+                <img class="col-md-2 img" id="black" src="assets/images/black.jpg" alt="black" width=150 height=150>
+                <img class="col-md-2 img" id="purple" src="assets/images/purple.jpg" alt="purple" width=150 height=150>
+                <img class="col-md-2 img" id="diamond" src="assets/images/diamond.jpg" alt="diamond" width=150 height=150>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+</div>
+
+</div>
+
+</body>
+</html>
